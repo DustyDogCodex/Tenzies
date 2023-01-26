@@ -1,38 +1,48 @@
-.App {
+* {
+  box-sizing: content-box;
+  font-family: 'Delicious Handrawn', cursive;
+}
+
+.main {
+  height: 100vh;
+  background: rgb(0,10,31);
+  padding: 50px;
+}
+
+.board {
+  margin-top: 40%;
+  background: orange;
+  padding: 50px;
+  font-size: 32px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* styling for area containing the die */
+.dice-area{
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  grid-template-columns: repeat(5, auto);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* styling for individual dice buttons */
+.dice {
+  height: 50px;
+  width: 50px;
+  background: whitesmoke;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* styling for roll/reset button */
+.roll {
+  padding: 15px 40px;
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: 900;
+  background: rgb(111,0,255);
+  border: none;
+  border-radius: 10px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
