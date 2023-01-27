@@ -7,10 +7,12 @@
   height: 100vh;
   background: rgb(0,10,31);
   padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .board {
-  margin-top: 40%;
   background: orange;
   padding: 50px;
   font-size: 32px;
@@ -30,9 +32,11 @@
 .dice {
   height: 50px;
   width: 50px;
+  font-size: 36px;
   background: whitesmoke;
   border: 1px solid black;
   border-radius: 10px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* styling for roll/reset button */
