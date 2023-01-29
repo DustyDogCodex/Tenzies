@@ -1,6 +1,6 @@
 function Dice(props) {
     return(
-        <button className="dice">{props.value}</button>
+        <button className={props.heldOrNah ? 'dice dice-held' : 'dice'}>{props.value}</button>
     )
 }
 
