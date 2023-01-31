@@ -5,6 +5,19 @@ function Board(){
     
     const [diceValues, setDiceValues] = React.useState(newDieRoll())
 
+    const [tenzies, setTenzies] = React.useState(false)
+
+    React.useEffect(() => {
+        let allDiceHeld = diceValues.every(dice => dice.isHeld)
+        let firstNumValue = diceValues[0].num
+        let allNumsAreEqual = diceValues.every(dice => dice.num == firstNumValue)
+
+        if (allDiceHeld && allNumsAreEqual){
+            setTenzies(true)
+            console.log('YOU WON!!!')
+        } 
+    }, [diceValues])
+
     function newDieRoll() {
         const die_array = []
         for(let i = 0; i < 10; i++){
@@ -17,7 +30,7 @@ function Board(){
     function holdDice(event){
         const selectedID = event.target.id
         setDiceValues(prevDice => prevDice.map(dice => {
-            return selectedID === dice.id ? 
+            return selectedID == dice.id ? 
             {...dice, isHeld: !dice.isHeld} : 
             dice
         }))
