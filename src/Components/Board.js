@@ -1,5 +1,6 @@
 import React from "react"
 import Dice from "./Dice"
+import Confetti from "react-confetti"
 
 function Board(){
     
@@ -14,7 +15,6 @@ function Board(){
 
         if (allDiceHeld && allNumsAreEqual){
             setTenzies(true)
-            console.log('YOU WON!!!')
         } 
     }, [diceValues])
 
@@ -43,21 +43,27 @@ function Board(){
 
     /* resets state when user wants to reroll dice */
     function rerollDice(){
-        setDiceValues(prevDice => prevDice.map(dice => {
-            return dice.isHeld ? 
-                    dice :
-                    {...dice, num: Math.ceil(Math.random() * 6)}
-        }))
+        if(tenzies == false){
+            setDiceValues(prevDice => prevDice.map(dice => {
+                return dice.isHeld ? 
+                        dice :
+                        {...dice, num: Math.ceil(Math.random() * 6)}
+            }))
+        } else {
+            setTenzies(false)
+            setDiceValues(newDieRoll)
+        }
     }
 
     return(
         <div className="board">
+            {tenzies && <Confetti />}
             <h1>Tenzies</h1>
             <p>Roll until all die are the same. Click each die to freeze it at its current value between rolls.</p>
             <div className="dice-area">
                 {diceElements}
             </div>
-            <button className="roll" onClick={rerollDice}>Roll the dice!</button>
+            <button className="roll" onClick={rerollDice}>{tenzies ? 'Reset The Game!' : 'Roll The Dice!'}</button>
         </div>
     )
 }
