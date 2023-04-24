@@ -1,4 +1,4 @@
-<strong>Tenzies! Game</strong>
+# Tenzies! Game
 
 Built using ReactJs.
 
