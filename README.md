@@ -1,3 +1,3 @@
 Tenzies game
 
-Simple Tenzies game built using React.js
+U+1F3B2 
