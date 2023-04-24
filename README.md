@@ -1,4 +1,6 @@
-Tenzies game
+<strong>Tenzies! Game</strong>
+
+Built using ReactJs.
 
 &#127922; <a href='https://dustydogcodex.github.io/Tenzies/'>LIVE DEMO</a> &#127922;
 
@@ -23,7 +25,7 @@ Then on your local machine use
 
 npm start     --- to start the project
 
-npm run build --- to run a productin build
+npm run build --- to run a production build
 
 Future enhancements:
 
