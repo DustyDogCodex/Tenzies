@@ -27,7 +27,7 @@ npm start     --- to start the project
 
 npm run build --- to run a production build
 
-Future enhancements:
+Future enhancements/features to be added:
 
 1) add a second board to allow 2 players to  play in turns.
 2) add a counter to show how many rolls it takes for a player to win a round.
