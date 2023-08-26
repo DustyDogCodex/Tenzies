@@ -2,6 +2,8 @@
 
 Built using ReactJs.
 
+<h2 align='center'> IN THE PROCESS OF IMPROVING RESPONSIVENSS </h2>
+
 &#127922; <a href='https://dustydogcodex.github.io/Tenzies/'>LIVE DEMO</a> &#127922;
 
 For this project I created a recreation of the popular game Tenzies! The objective of this game is for the player to roll 10 die that all have the same number facing up. The player can 'freeze' or hold die in place that have the same number, but all the frozen die need to be of the same number.
