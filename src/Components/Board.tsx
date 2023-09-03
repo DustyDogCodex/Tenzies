@@ -62,7 +62,7 @@ function Board(){
 
     return(
         <div 
-            className="bg-orange-400 p-5 text-center rounded-lg"
+            className="bg-orange-400 p-5 text-center rounded-none md:rounded-lg flex flex-col justify-center items-center"
         >
             <h1 className="text-5xl">Tenzies</h1>
             <p

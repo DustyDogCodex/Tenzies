@@ -8,7 +8,7 @@ type DiceProps = {
 function Dice({ value, heldOrNah, id, handleClick }: DiceProps ) {
     return(
         <button  
-            className={heldOrNah ? 'dice dice-held' : 'dice'} 
+            className={`h-12 w-12 text-4xl border-0 rounded-lg shadow-lg shadow-neutral-700 ${ heldOrNah ? 'bg-green-500' : 'bg-white'} hover:scale-125 transition duration-300 hover:bg-green-500`}  
             onClick={() => handleClick(id)}
         >
             {value}
