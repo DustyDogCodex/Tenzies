@@ -1,14 +1,14 @@
-import React from "react"
 import Dice from "./Dice"
 import Confetti from "react-confetti"
+import { useEffect, useState } from "react"
 
 function Board(){
     
-    const [diceValues, setDiceValues] = React.useState(newDieRoll())
+    const [diceValues, setDiceValues] = useState(newDieRoll())
 
-    const [tenzies, setTenzies] = React.useState(false)
+    const [tenzies, setTenzies] = useState(false)
 
-    React.useEffect(() => {
+    useEffect(() => {
         let allDiceHeld = diceValues.every(dice => dice.isHeld)
         let firstNumValue = diceValues[0].num
         let allNumsAreEqual = diceValues.every(dice => dice.num == firstNumValue)
@@ -27,10 +27,9 @@ function Board(){
     }
 
     /* function to flip the value of dice that were selected by the player */
-    function holdDice(event){
-        const selectedID = event.target.id
+    function holdDice(selectedId: number){
         setDiceValues(prevDice => prevDice.map(dice => {
-            return selectedID == dice.id ? 
+            return selectedId == dice.id ? 
             {...dice, isHeld: !dice.isHeld} : 
             dice
         }))
@@ -38,7 +37,13 @@ function Board(){
 
     /* array containing 10 dice elements that will be displayed in dice-area div. This way dice elements will load with a new value when user rolls or resets them. */
     const diceElements = diceValues.map(dice => (
-        <Dice key={dice.id} value={dice.num} heldOrNah={dice.isHeld} id={dice.id} handleClick={holdDice}/>
+        <Dice 
+            key={dice.id} 
+            value={dice.num} 
+            heldOrNah={dice.isHeld} 
+            id={dice.id} 
+            handleClick={holdDice}
+        />
     ))
 
     /* resets state when user wants to reroll dice */
