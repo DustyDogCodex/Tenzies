@@ -17,22 +17,6 @@
   align-items: center;
 }
 
-.board {
-  background: orange;
-  padding: 50px;
-  font-size: 32px;
-  text-align: center;
-}
-
-/* styling for area containing the die */
-.dice-area{
-  margin-top: 50px;
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-  gap: 20px;
-  grid-template-columns: repeat(5, auto);
-}
-
 /* styling for individual dice buttons */
 .dice {
   height: 50px;
@@ -54,23 +38,3 @@
   background: rgb(118,255,122);
 }
 
-/* styling for roll/reset button */
-.roll {
-  padding: 15px 40px;
-  margin-top: 50px;
-  font-size: 24px;
-  font-weight: 900;
-  background: rgb(111,0,255);
-  border: none;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-}
-
-.roll:hover{
-  transform: scale(1.4);
-}
-
-.roll:active {
-  transform: scale(0.8);
-}
